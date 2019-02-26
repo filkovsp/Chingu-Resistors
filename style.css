@@ -1,0 +1,19 @@
+.block {
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    background-color: lime;
+    margin-left: 5px;
+}
+
+.image {
+    display: block;
+}
+
+.hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    left: -5px;
+}
