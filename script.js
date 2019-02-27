@@ -18,4 +18,5 @@ function show() {
     console.log(block);
     console.log(value);
     console.log(select);
+    
 }
