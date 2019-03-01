@@ -102,6 +102,9 @@ body {
     border-right: 1px solid black;
 }
 
+.block3, .block5 ,.block7, .block9{
+    background-color: lime;
+}
 
 
 

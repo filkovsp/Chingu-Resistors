@@ -6,18 +6,21 @@
 
 <body>
     <div class='top'>
-        <input type='text' class='text'>
-        <select name='ohm_list' form='form' class='select'>
-            <option value=''>Please choose multiplier</option>
-            <option value='0'>Ohm</option>
-            <option value='3'>KOhm</option>
-            <option value='6'>MOhm</option>
+        <input type='number' class='text'>
+        <select name='multiplier' class='select'>
+            <option value='1' selected>Ohm</option>
+            <option value='1000'>kOhm</option>
+            <option value='1000000'>MOhm</option>
         </select>
-        <button class='button'>Calculate</button>
+        <select name='tolerance' class='select'>
+                <option value='5'>5%</option>
+                <option value='10'>10%</option>
+                <option value='20' selected>20%</option>
+            </select>
 
     </div>
 
-    <div class='image hidden'>
+    <div class='image '>
         <div class='block block1'></div>
         <div class='block block2'></div>
         <div class='block block3'></div>
