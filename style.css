@@ -41,16 +41,19 @@ body {
 .block {
     border: 1px solid black;
     border-right: 0px;
+    border-left: 0px;
 }
 
 .block1 {
     width: 60px;
     height: 10px;
+    border-left: 1px solid black;
 }
 
 .block2 {
     width: 10px;
     height: 40px;
+    border-left: 1px solid black;
 }
 
 .block3 {
@@ -91,14 +94,14 @@ body {
 .block10 {
     width: 60px;
     height: 40px;
-    border-width: 1px 1px 1px 1px;
+    /* border-width: 1px 1px 1px 1px; */
     border-right: 1px solid black;
 }
 
 .block11 {
     width: 60px;
     height: 10px;
-    border-width: 1px 1px 1px 0px;
+    /* border-width: 1px 1px 1px 0px; */
     border-right: 1px solid black;
 }
 
