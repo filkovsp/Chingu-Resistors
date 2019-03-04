@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		we process changes in selectors "multiplier" & "tolerance":
 	*/
 	document.querySelector('select[name="multiplier"]').onchange = calc;
-	document.querySelector('select[name="tolerance"]').onchange = calc;                
+	document.querySelector('select[name="tolerance"]').onchange = calc;
 	// more about events here: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
 
 }, false); // end of addEventListener()
@@ -175,19 +175,25 @@ function drawResistor(value) {
 		*/
 		var val = str.nominal * str.multiplier;
 
-		if (val < 10 ) {    
+		if (val == 0) {
+			band1 = 0;
+			band2 = 0;
+			band3 = 0;
+			
+		} else if (val < 10 ) {    
 			band1 = 0;
 			band2 = str.nominal;
 			band3 = str.multiplier;
 			
 		} else {
 			val = Math.round(
-					val / Math.pow(10, ((val + "").length - 2))
-				) * Math.pow(10, ((val + "").length - 2));
+				val / Math.pow(10, (val.toString().length - 2))
+			) * Math.pow(10, (val.toString().length - 2));
 			
 			band1 = val.toString()[0];
 			band2 = val.toString()[1];
-			band3 = (val + "").length - 2
+			// band3 = (val + "").length - 2
+			band3 = (val.toString()).length - 2
 		}
 		
 		band4 = str.tolerance;

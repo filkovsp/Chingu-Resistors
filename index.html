@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>Resistor Color Codes</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <!-- 
+        resistor-color-codes-part-1: https://www.codewars.com/kata/57cf3dad05c186ba22000348
+        resistor-color-codes-part-2: https://www.codewars.com/kata/resistor-color-codes-part-2
+        Resistor_color-coding:       https://en.wikipedia.org/wiki/Electronic_color_code#Resistor_color-coding
+    -->
+</head>
+    <body>
+        <div id="calculator">
+            <div class="input">
+                
+                <input type="number"
+                    min="0" max="1000"
+                    name="nominal" value="" placeholder="Enter the resistance value">
+
+            <!-- 
+                <input type="text" name="nominal" value="" placeholder="Enter the resistance value">
+            -->
+
+                <select name="multiplier">
+                    <option value="1" selected>Ohm(s)</option>
+                    <option value="1000">kOhm(s)</option>
+                    <option value="1000000">MOhm(s)</option>
+                </select>
+
+                <select name="tolerance">
+                    <option value="0" selected>20%</option>
+                    <option value="1">10%</option>
+                    <option value="2">5%</option>
+                    <option value="3">2%</option>
+                    <option value="4">2%</option>
+                    <option value="5">0.5%</option>
+                    <option value="6">0.25%</option>
+                    <option value="7">0.1%</option>
+                </select>
+
+
+            </div>
+        
+        </div>
+        
+        
+        <div id="error"></div>
+
+        <div id="image">
+            <div class="input">
+                <div class="contact" id="left_contact"></div>
+                <div class="resistor_body" style="width:5px; border-width: 1px 0px 1px 1px;"></div>
+                <div class="resistor_body" style="width:12px;" id="band1"></div>
+                <div class="resistor_body" style="width:3px;"></div>
+                <div class="resistor_body" style="width:12px;" id="band2"></div>
+                <div class="resistor_body" style="width:3px;"></div>
+                <div class="resistor_body" style="width:12px;" id="band3"></div>
+                <div class="resistor_body" style="width:10px;"></div>
+                <div class="resistor_body" style="width:12px;" id="band4"></div>
+                <div class="resistor_body" style="width:30px; border-width: 1px 1px 1px 0px;"></div>
+                <div class="contact" id="right_contact"></div>
+            </div>
+        </div>
+
+        <script language="javascript" type="text/javascript" src='resistors.js'></script>
+    </body>
+</html>
