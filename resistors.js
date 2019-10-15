@@ -15,14 +15,14 @@ const colorTable = {
 };
 
 const toleranceTable = {
-	"0" : {"tolerance" : "20",   "background-color" : "transparent"	},
-	"1" : {"tolerance" : "10",   "background-color" : "pink"  		},
-	"2" : {"tolerance" : "5", 	 "background-color" : "gold"  		},
-	"3" : {"tolerance" : "2", 	 "background-color" : "red"   		},
-	"4" : {"tolerance" : "1", 	 "background-color" : "brown" 		},
-	"5" : {"tolerance" : "0.5",  "background-color" : "green" 		},
-	"6" : {"tolerance" : "0.25", "background-color" : "blue"  		},
-	"7" : {"tolerance" : "0.1",  "background-color" : "violet"		}
+	"0" : {"tolerance" : "20",   "background-color" : "transparent"	  },
+	"1" : {"tolerance" : "10",   "background-color" : "pink"          },
+	"2" : {"tolerance" : "5",    "background-color" : "gold"  	  },
+	"3" : {"tolerance" : "2",    "background-color" : "red"   	  },
+	"4" : {"tolerance" : "1",    "background-color" : "brown" 	  },
+	"5" : {"tolerance" : "0.5",  "background-color" : "green" 	  },
+	"6" : {"tolerance" : "0.25", "background-color" : "blue"  	  },
+	"7" : {"tolerance" : "0.1",  "background-color" : "violet"	  }
 };
 
 
@@ -42,16 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		oldValue = event.target.value;
 	}
 	
-	/*
+	/* uncomment code below if:
 		we want to check the validity of the input while user is typing it
 		however, if we use input[type="number"], we don't really need 
 		this event handler. As this is done by the system then.
+	
+	 document.querySelector('input[name="nominal"]').oninput = function() {
+	     if (oldValue != event.target.value) {
+	         checkInput(event.target.value);
+	     }
+	 };
+	 
 	*/
-	// document.querySelector('input[name="nominal"]').oninput = function() {
-	//     if (oldValue != event.target.value) {
-	//         checkInput(event.target.value);
-	//     }
-	// };
 	
 	/* 
 		we are going to check if "Enter" key pressed. If yes, 
@@ -80,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	
 	/*
-		we are not doing to use "onchange" event for now.
+		we are not going to use "onchange" event for now.
 	*/
 	// document.querySelector('input[name="nominal"]').onchange = calc;
 
@@ -192,7 +194,6 @@ function drawResistor(value) {
 			
 			band1 = val.toString()[0];
 			band2 = val.toString()[1];
-			// band3 = (val + "").length - 2
 			band3 = (val.toString()).length - 2
 		}
 		
